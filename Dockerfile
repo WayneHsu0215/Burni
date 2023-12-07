@@ -1,7 +1,7 @@
 FROM keymetrics/pm2:16-slim
 
 # Install JDK
-RUN apt update && apt install openjdk-11-jdk-headless make g++ python3 -y
+RUN apt update && apt install openjdk-11-jdk-headless make g++ python3 netcat curl iputils-ping -y
 
 WORKDIR /
 RUN mkdir -p /nodejs/fhir-burni/

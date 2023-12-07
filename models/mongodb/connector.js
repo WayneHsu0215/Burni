@@ -14,6 +14,7 @@ module.exports = exports = function (config) {
     const collection = {};
     let databaseUrl = "";
 
+    //print out the config
     hosts.forEach((host, index) => {
         if (index == 0) {
             databaseUrl += `mongodb://${host}:${ports[0]}`;
@@ -22,6 +23,9 @@ module.exports = exports = function (config) {
         }
     });
     databaseUrl += `/${dbName}`;
+
+
+
 
     console.log(databaseUrl);
     mongoose
